@@ -47,3 +47,8 @@ result:
 README.md
 activity-log.md
 ```
+
+#### gitignore all node_modules/
+pattern:
+> node_modules/
+to ignore all folders with this name in the main directory
