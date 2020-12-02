@@ -32,3 +32,18 @@
 #### successfull revert back to Revert "Revert  "activity log starting clean project""
 
 - the revert was done using Git Desktop
+
+#### server and client folders dont seem to appear on public repo
+attempting to fix this :
+
+- synchronising gepime-bot repo
+no results: public repo doesnt have ./client and ./server
+
+- listing all files under source control in the current repo
+> git ls-tree -r master --name-only
+
+result: 
+```
+README.md
+activity-log.md
+```
