@@ -5,6 +5,10 @@
 ----
 
 ## 1. OVERVIEW
+### 1.1. Dependancies 
+- Express
+- Mongoose
+- nodemon
 
 ---
 
@@ -53,3 +57,5 @@ pattern:
 > node_modules/
 
 to ignore all folders with this name in the main directory
+
+#### setting up index.js as app entry point
