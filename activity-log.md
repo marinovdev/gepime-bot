@@ -75,3 +75,33 @@ https://softwareontheroad.com/ideal-nodejs-project-structure/
 
 ### starting mongo db server on port 3001
 > mongod --port"3001"
+
+### installing puppeter js
+> npm i puppeteer
+
+### waiting for page to load with setTimeout() caused error
+```js
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+  > setTimeout(( () => page.goto('https://planetromeo.com'))(), 5000)
+    await page.screenshot({path: 'example.png'});
+  
+    await browser.close();
+  })();
+```
+
+```
+UnhandledPromiseRejectionWarning: TypeError [ERR_INVALID_CALLBACK]: Callback must be a function. Received Promise { <pending> }
+    at setTimeout (timers.js:121:3)
+    at C:\Users\vyful\Desktop\PROJECTS\gepime-bot\server\puppeter-scratchpad.js:6:4
+```
+
+SOLUTION: Don't use setTimeout() 
+use waitUntil param
+```js
+await page.goto('https://www.planetromeo.com/', {waitUntil: 'networkidle2'})
+```
+
