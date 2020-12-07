@@ -59,3 +59,19 @@ pattern:
 to ignore all folders with this name in the main directory
 
 #### setting up index.js as app entry point
+
+#### studying design patterns to be used for the app
+https://dzone.com/articles/design-patterns-in-expressjs
+
+#### desiding where to store the modules of the API
+
+- discovered the definition project architecture
+
+- studying project architectures
+https://softwareontheroad.com/ideal-nodejs-project-structure/
+
+#### decission made to use MVC architecture
+- alike pattern : https://github.com/marinovdev/JavaScript/blob/master/JS%20Core/JS%20Applications/13-exam-prep/web-app1/scripts/app.js
+
+### starting mongo db server on port 3001
+> mongod --port"3001"
