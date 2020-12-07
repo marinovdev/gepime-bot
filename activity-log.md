@@ -105,3 +105,9 @@ use waitUntil param
 await page.goto('https://www.planetromeo.com/', {waitUntil: 'networkidle2'})
 ```
 
+### puppeter headdles mode
+- headles mode set to false opens Chromium browser
+- default if true
+```
+const browser = await puppeteer.launch({headless: false}) // opens Chromium
+```
