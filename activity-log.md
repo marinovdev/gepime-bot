@@ -111,3 +111,16 @@ await page.goto('https://www.planetromeo.com/', {waitUntil: 'networkidle2'})
 ```
 const browser = await puppeteer.launch({headless: false}) // opens Chromium
 ```
+
+### create config.js for storing all the app global vars and settings
+
+### install mongodb
+> npm i mongodb
+
+- Mongoose is for object relational mapping and we dont need it.
+
+### db connection made in utils/db.js
+
+### creating new collection procies in db gepime-bot
+
+- during the creation of the collection stumbled accross 2 definitions that seem to me difficult to understand : 'Capped Colation', 'Use Custom Colation'
