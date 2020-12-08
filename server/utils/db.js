@@ -1,13 +1,14 @@
-const config = require('config')
+const config = require('./config')
 
 var MongoClient = require('mongodb').MongoClient
 
-MongoClient.connect(`mongodb://${config.mongodbHost}:${config.mongodbPort}/${config.mongodbDataBase}`, function (err, db) {
-  if (err) throw err
+const uri = `mongodb+srv://${config.mongodbUser}:${config.mongodbPass}@${config.mongodbHost}:${config.mongodbPort}/${config.mongodbDataBase}`
+const client = MongoClient(uri);
 
-  db.collection('proxies').find().toArray(function (err, result) {
-    if (err) throw err
+ ( async function() {
+    await client.connect();
+})()
 
-    console.log(result)
-  })
-})
+module.exports = {
+    client
+}

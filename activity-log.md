@@ -124,3 +124,30 @@ const browser = await puppeteer.launch({headless: false}) // opens Chromium
 ### creating new collection procies in db gepime-bot
 
 - during the creation of the collection stumbled accross 2 definitions that seem to me difficult to understand : 'Capped Colation', 'Use Custom Colation'
+
+### problem while connecting to mongoDB
+
+:x: MongoClient must be connected before calling MongoClient.prototype.db
+
+db.js
+```js
+const config = require('./config')
+
+var MongoClient = require('mongodb').MongoClient
+
+const uri = `mongodb+srv://${config.mongodbUser}:${config.mongodbPass}@${config.mongodbHost}:${config.mongodbPort}/${config.mongodbDataBase}`
+const client = MongoClient(uri);
+
+ ( async function() {
+    await client.connect();
+})()
+
+module.exports = {
+    client
+}
+```
+
+SOLUION: connection must run asynchronoysly with other app modules:
+[Stackoverflow](https://stackoverflow.com/questions/24621940/how-to-properly-reuse-connection-to-mongodb-across-nodejs-application-and-module)
+
+###
