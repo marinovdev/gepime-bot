@@ -5,4 +5,5 @@ module.exports =  {
     mongodbHost: '127.0.0.1',
     mongodbPort: '3001',
     mongodbDataBase: 'gepime-bot',
+    screnshotsDir: './screenshots/'
 }

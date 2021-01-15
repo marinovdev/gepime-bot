@@ -74,7 +74,7 @@ https://softwareontheroad.com/ideal-nodejs-project-structure/
 - alike pattern : https://github.com/marinovdev/JavaScript/blob/master/JS%20Core/JS%20Applications/13-exam-prep/web-app1/scripts/app.js
 
 ### starting mongo db server on port 3001
-> mongod --port"3001"
+> "C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --port 3001
 
 ### installing puppeter js
 > npm i puppeteer

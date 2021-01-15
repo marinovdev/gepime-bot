@@ -2,13 +2,13 @@ let puppeteer = require('puppeteer');
 let randomString = require('./randomString');
 const config = require('./config');
 
-
-class EmailManager{
+class WebManager{
 
 /** 
-* @param {string} emailProvider the url of the mail provider
+* @param {string} webPage web site
+* @param {object} browser puppeter browser
 */
-constructor(emailProvider, browser){
+constructor(webPage, browser){
     
 this.emailProvider = emailProvider;
 this.browser = browser;
@@ -16,7 +16,6 @@ this.page;
 }
 
 /**
- * 
  * @param {object} browser the browser promise that is returned 
  * @param {string} emailProvider the http address of the email provider 
  */
@@ -87,10 +86,4 @@ browser() {
     return this.browser;
 }
 
-}
-
-
-
-module.exports = {
-    EmailManager
 }
